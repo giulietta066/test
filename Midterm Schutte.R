@@ -171,12 +171,12 @@ wathole$GroupType<-as.integer(wathole$GroupType)
 #Unknown adult (6),Breeding herd (7), Bull and cow (8)
 wathole$GroundAccess<-as.logical(wathole$GroundAccess)
 
-#FiguresPart1
+#Figures-not used
 plot(x=wathole$DurationMins, y=wathole$Species, main="Amount of Time Taken at Watering Hole",xlab="Duration (minutes)",ylab="Species Type")
 plot(x=wathole$NoAnimals,y=wathole$Species, main="Number of Other Animals at Watering Hole at Time of Sighting",xlab="Number of Animals",ylab="Species Type")
 plot(x=wathole$WoodySpHeightCM,y=wathole$Species, main="Species Sighting vs Woody Plant Height",xlab="Height of Woody Plants (cm) Surrounding Watering Holes", ylab="Species Type")
 
-#use these
+#Figures Pt 1.1
 hist(Elephant$WHType, ylim = c(0,350),main="Elephant Count")
 hist(BlkRhno$WHType,ylim=c(0,80),main="Black Rhino Count")
 hist(WhtRhno$WHType,ylim=c(0,15),main="White Rhino Count")
@@ -184,7 +184,7 @@ hist(WhtRhno$WHType,ylim=c(0,15),main="White Rhino Count")
 hist(Elephant$DurationMins,ylim=c(0,600))
 hist(Elephant$NoAnimals, ylim=c(0,500))
 
-#use these
+#Figures Pt 1.2
 plot(x=Elephant$WHType,y=Elephant$DurationMins,main="Time Recorded at Watering Holes by African Elephants",xlab="Waterhole Type - Earth Dam (1), Concrete (2), Pan (3), Reservoir (4), Trough (5)",ylab="Duration (Minutes)")
 plot(x=BlkRhno$WHType,y=BlkRhno$DurationMins,main="Time Recorded at Watering Holes by Black Rhinos",xlab="Waterhole Type - Earth Dam (1), Concrete (2), Pan (3), Reservoir (4), Trough (5)",ylab="Duration (Minutes)")
 plot(x=WhtRhno$WHType,y=WhtRhno$DurationMins,main="Time Recorded at Watering Holes by White Rhinos",xlab="Waterhole Type - Earth Dam (1), Concrete (2), Pan (3), Reservoir (4), Trough (5)",ylab="Duration (Minutes)")
@@ -192,4 +192,5 @@ plot(x=WhtRhno$WHType,y=WhtRhno$DurationMins,main="Time Recorded at Watering Hol
 #citations
 citation("readr")
 citation("readxl")
+
 citation()
